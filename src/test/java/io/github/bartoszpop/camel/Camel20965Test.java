@@ -42,7 +42,7 @@ public class Camel20965Test {
       throws Exception {
     // Arrange
     var veryBigFile = readString(Paths.get("src/test/resources/VeryBigFile.txt"));
-    stubFor(get("/").willReturn(ok(veryBigFile)));//.withHeader("Content-Type", "text/plain; charset=utf-8")));
+    stubFor(get("/").willReturn(ok(veryBigFile)));
     camelContext.addRoutes(new EndpointRouteBuilder() {
       @Override
       public void configure() {
